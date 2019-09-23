@@ -13,16 +13,16 @@
         <p>no heroes yet!!!</p>
     {{/if}}
 
-{{!--     {{#if squads}} --}}
-{{!--         {{#each squads}} --}}
-{{!--             <button  class="btn btn-primary mb-2">{{ name }} <a href="/squad/{{id}}">read more...</a></button> --}}
+    {{#if squads}}
+        {{#each squads}}
+            <button  class="btn btn-primary mb-2">{{ name }} <a href="/squad/{{id}}">read more...</a></button>
 
-{{!--         {{/each}} --}}
-{{!--     {{else}} --}}
-{{!--         <p>no squad yet!!!!</p> --}}
-{{!--     {{/if}} --}}
-{{!--     </div> --}}
-{{!--     </div> --}}
+        {{/each}}
+    {{else}}
+        <p>no squad yet!!!!</p>
+    {{/if}}
+    </div>
+    </div>
 
-{{!-- {{/partial}} --}}
-{{!-- {{> layout.hbs}} --}}
+{{/partial}}
+{{> layout.hbs}}
