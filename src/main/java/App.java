@@ -38,7 +38,7 @@ public class App {
 
 
 
-      git   get("/hero/:id", (req, res) -> {
+         get("/hero/:id", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
 //            List<Hero> hero = Hero.all();
             int idOfHeroToFind = Integer.parseInt(req.params(":id"));
