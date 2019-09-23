@@ -3,23 +3,23 @@ import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//import static spark.Spark.*;
-//
-//public class App {
-//    public static void main(String[] args) {
-//        staticFileLocation("/public");
-//        get("/", (request, response) -> {
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            ArrayList<Hero> heroes = Hero.all();
-//            ArrayList<Squad> squads = Squad.all();
-//            model.put("heroes", heroes);
-//            model.put("squads",squads);
-//            return new ModelAndView(model, "index.hbs");
-//        }, new HandlebarsTemplateEngine());
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static spark.Spark.*;
+
+public class App {
+    public static void main(String[] args) {
+        staticFileLocation("/public");
+        get("/", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Hero> heroes = Hero.all();
+            ArrayList<Squad> squads = Squad.all();
+            model.put("heroes", heroes);
+            model.put("squads",squads);
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
 //
 //        get("/heroes/new", (req, res) -> {
 //            Map<String, Object> model = new HashMap<>();
