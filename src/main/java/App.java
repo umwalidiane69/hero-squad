@@ -20,25 +20,25 @@ public class App {
             model.put("squads",squads);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
-//
-//        get("/heroes/new", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            return new ModelAndView(model, "hero-form.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        post("heroes/new", (request, response) -> {
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            String name = request.queryParams("name");
-////            Integer age = Integer.parseInt(request.params("age"));
-//            String strength = request.queryParams("strength");
-//            String weakness = request.queryParams("weakness");
-//            Hero newPost = new Hero(name,strength,weakness);
-//            return new ModelAndView(model, "success.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//
-//
-//        get("/hero/:id", (req, res) -> {
+
+        get("/heroes/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "hero-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("heroes/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("name");
+//            Integer age = Integer.parseInt(request.params("age"));
+            String strength = request.queryParams("strength");
+            String weakness = request.queryParams("weakness");
+            Hero newPost = new Hero(name,strength,weakness);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
+
+//      git   get("/hero/:id", (req, res) -> {
 //            Map<String, Object> model = new HashMap<>();
 ////            List<Hero> hero = Hero.all();
 //            int idOfHeroToFind = Integer.parseInt(req.params(":id"));
